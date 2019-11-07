@@ -180,7 +180,7 @@ function showSignedIn(session) {
         function initMap() {
 
             //Declaring the Map/Marker locations
-            var charlestowncenter = {
+            var mapcenter = {
                 lat: 39.26943246374224,
                 lng: -76.70338433653166
             };
@@ -189,7 +189,7 @@ function showSignedIn(session) {
             //Setting the map to populate in the div and to center at declared location. Setting rules for the map
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
-                center: charlestowncenter,
+                center: mapcenter,
                 draggable: true,
                 scrollwheel: true,
                 minZoom: 16,
