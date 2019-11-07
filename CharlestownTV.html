@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+
+<head>
+    <style>
+        html,
+        body,
+        #map-container {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        
+        #logo {
+            float: left;
+          /*  box-shadow: 1px 5px 5px grey;*/
+            width: 20%;
+            height: 8%;
+            padding: 0px 5px 0px 5px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            background-image: url('https://sites.google.com/site/mapkmlfiles33/mapicons/charlestownlogo.png?attredirects=0&d=1');
+           /* background:rgb(red, green, blue);*/
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: 5;
+            top: 12%;
+            left: 1%;
+        }
+        
+        #textbox2 {
+            box-shadow: 5px 5px 5px grey;
+            float: left;
+            width: 20%;
+            padding: 3px 5px 3px 5px;
+            background: rgba(255, 255, 255, 0.856);
+            background-size: contain;
+            height: 70%;
+            position: fixed;
+            z-index: 2;
+            top: 20%;
+            left: 1%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+
+
+</head>
+
+<body onload="onload2()">
+
+
+
+
+
+
+    <!--The div element for the map -->
+    <div id="map-container">
+
+
+        <!-- Div Element for the sidebar-->
+        <div class="sidebar bar-block border-left animate-right" style="display:none;right:0" id="mySidebar">
+            <button onclick="side_close()" class="bar-item large">Close &times;</button>
+
+            <input type="button" class="bar-item btn" title="Sign In" id = "signInButton" href="javascript:void(0)" value="Sign In">
+            <input type="button" class="bar-item btn" value="Test2">
+            <input type="button" class="bar-item btn" value="Filter">
+            <input type="button" class="bar-item btn" value="Fullscreen" onclick="toggleFullScreen(document.body)">
+            <div id="innersidebar"></div>
+        </div>
+
+        <div class="black ">
+            <button class="button black xlarge right" onclick="side_open()">☰</button>
+        </div>
+
+        <div id="logo">
+
+  
+        </div>
+
+        <div id="textbox2">
+            <center><h3>Shuttle Route:</h3></center>
+            <ul>
+                <li> Herbert’s Run resident entrance </li>
+                <li> Cross Creek Station</li>
+                <li> Brookside resident entrance</li>
+                <li> Caton Woods (ALF)</li>
+                <li> Renaissance Gardens North (SNF)</li>
+                <li> Wilton Overlook (SNF)</li>
+                <li> Fountain Hill (Bldg.1)</li>
+                <li> Edgewood (Bldg.7)</li>
+                <li> Saint Charles</li>
+                <li> Harbor View resident entrance</li>
+                <li> Caton Ridge resident entrance</li>
+                <li> Charlestown Square</li>
+            </ul>
+
+
+        </div>
+
+        <div id="map"> </div>
+
+    </div>
+
+
+
+	
+
+
+
+
+
+    <!-- Adding the map to page-->
+
+    <!-- <script type="text/javascript" src="Scripts/authorization.js"></script>-->
+    <script type="text/javascript" src="Scripts/togglefullscreen.js"></script>
+    <script type="text/javascript" src="Scripts/MapSettings.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key='YOUR_API_KEY'"></script>
+    <script type="text/javascript" src="Scripts/sidebarscript.js"></script>
+    <script type = "text/javascript" src="Scripts/jquery.min.js"></script>
+    <script type = "text/javascript" src="Scripts/aws-sdk.js"></script>
+    <script type = "text/javascript" src="Scripts/bundle.js"></script>
+    <script src="Scripts/amazon-cognito-auth.js"></script>
+
+</body>
+
+</html>

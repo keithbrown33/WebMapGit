@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+
+<head>
+
+    <!--     <script src = "\\md1-cifs01\users\kabrown4\WebMap\Scripts\mqttws31.js" type = "text/javascript" ></script>
+         <script src = "\\md1-cifs01\users\kabrown4\WebMap\Scripts\jquery.min.js" type = "text/javascript" ></script>
+       <script src = "\\md1-cifs01\users\kabrown4\WebMap\Scripts\mqtt.js" type = "text/javascript" ></script>-->
+    <!-- Setting the size/style of my map-->
+    <style>
+
+html,
+body,
+#map-container{height:100%; width: 100%; position: relative;}
+#logo { float: left; width: 25%;height:15%; padding: 0px 5px 0px 5px;background: url('https://sites.google.com/site/mapkmlfiles33/mapicons/charlestownlogo.png?attredirects=0&d=1'); position: fixed; z-index:2; top:0%; left: 0%;}
+#textbox2 { float: left; width: 12%; padding: 0px 5px 0px 5px;background: #fff;height: 35%; position: fixed; z-index:2; top:20%; left: 1%;}
+body {margin: 0; padding: 0; }
+#map{height: 100%; width:100%; z-index:1;}
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+        
+    
+
+    
+
+
+    <!--The div element for the map -->
+    <div id="map-container">
+
+
+  <!-- Div Element for the sidebar-->
+  <div class="sidebar bar-block border-left animate-right" style="display:none;right:0" id="mySidebar">
+        <button onclick="side_close()" class="bar-item large">Close &times;</button>
+        <a href="#" class="bar-item btn"> Link 1</a>
+        <a href="#" class="bar-item btn">Link 2</a>
+        <a href="#" class="bar-item btn"> Filter</a>
+        <div id="innersidebar"></div>
+    </div>
+
+    <div class="black ">
+        <button class="button black xlarge right" onclick="side_open()">☰</button>
+    </div>
+
+
+
+            <div id="logo" ></div>
+            
+        <div id="map" > </div>
+    
+    </div>
+    
+    <!-- Adding the map to page-->
+    <script type = "text/javascript" src="Scripts/MapSettings.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmZWcL2cIhZYd_1kCSarbVWsXrhGvpKfw&callback=initMap"></script>
+    <script type="text/javascript" src="Scripts/sidebarscript.js">    </script>
+    
+</body>
+
+</html>
